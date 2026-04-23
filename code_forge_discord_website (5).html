@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeForge Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at 20% 20%, #1e293b, #020617);
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 { color: #f97316; }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #f97316; }
+
+    .lang-switch { cursor: pointer; margin-left: 10px; font-size: 14px; opacity: 0.7; }
+
+    section {
+      padding: 100px 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    section.show { opacity: 1; transform: translateY(0); }
+
+    .hero { text-align: center; }
+
+    .hero img {
+      width: 180px;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero h2 { font-size: 42px; margin-bottom: 15px; }
+
+    .hero p {
+      color: #94a3b8;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 25px;
+      line-height: 1.8;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      background: #f97316;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(249,115,22,0.5);
+    }
+
+    .btn:hover {
+      background: #ea580c;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(249,115,22,0.9);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(30,41,59,0.7);
+      backdrop-filter: blur(8px);
+      padding: 25px;
+      border-radius: 15px;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .card:hover { transform: translateY(-10px) scale(1.03); }
+
+    iframe {
+      border-radius: 15px;
+      margin-top: 30px;
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #64748b;
+    }
+  .code-box {
+  background: rgba(15,23,42,0.9);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(249,115,22,0.3);
+}
+.code-box pre {
+  color: #22c55e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CodeForge</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#why">Why Us</a>
+    <a href="#join">Join</a>
+  </nav>
+  <div>
+    <span class="lang-switch" onclick="setLang('id')">🇮🇩</span>
+    <span class="lang-switch" onclick="setLang('en')">🇬🇧</span>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="code-box">
+<pre><code>const dev = "CodeForge";
+function buildFuture(){
+  return "Learn • Build • Collaborate 🚀";
+}
+console.log(dev, buildFuture());</code></pre>
+</div>
+  <h2 id="title"></h2>
+  <p style="color:#f97316; font-weight:bold; margin-bottom:10px;">🚧 Under Development</p>
+  <p id="desc"></p>
+  <a href="https://discord.gg/zNyamgWge" target="_blank">
+    <button class="btn">Join Server 🚀</button>
+  </a>
+</section>
+
+<section id="about">
+  <h2 style="text-align:center;">About</h2>
+  <p id="aboutText" style="text-align:center; max-width:900px; margin:auto; color:#94a3b8; line-height:1.9;"></p>
+</section>
+
+<section id="why" class="features">
+  <div class="card">🚀 Fast Growing Developer Community</div>
+  <div class="card">💬 Active Discussion Every Day</div>
+  <div class="card">🤝 Real Project Collaboration</div>
+  <div class="card">🔥 Friendly, Non-Toxic Environment</div>
+</section>
+
+<section id="join" style="text-align:center;">
+  <h2>Join CodeForge</h2>
+  <p style="color:#94a3b8; max-width:800px; margin:auto; line-height:1.8;">
+    ID: Bergabunglah sekarang dan jadi bagian dari komunitas developer yang aktif, solid, dan terus berkembang. Jangan hanya melihat, tapi ikut berkontribusi, belajar, dan membangun sesuatu yang nyata bersama.
+    <br><br>
+    EN: Join now and become part of an active, solid, and ever-growing developer community. Don’t just watch—contribute, learn, and build something real together.
+  </p>
+
+  <a href="https://discord.gg/zNyamgWge" target="_blank">
+    <button class="btn">Join Our Discord Server 🚀</button>
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 CodeForge Community</p>
+</footer>
+
+<script>
+const content = {
+  id: {
+    title: "Tempat Hangout Developer 🚀",
+    desc: "CodeForge adalah komunitas developer tempat kamu bisa berkembang, belajar, dan berinteraksi dengan sesama programmer dari berbagai level. Di sini kamu bisa berdiskusi santai, bertanya, berbagi pengalaman, hingga membangun project bersama. Komunitas ini dibuat untuk menjadi tempat yang nyaman, aktif, dan produktif bagi siapa saja yang ingin serius di dunia teknologi.",
+    about: "CodeForge bukan hanya sekadar server Discord biasa, tetapi sebuah ekosistem kecil untuk developer. Kamu bisa menemukan teman satu minat, mentor, bahkan partner untuk membuat project atau startup kecil. Kami fokus pada pertumbuhan, kolaborasi, dan lingkungan yang positif agar semua member bisa berkembang tanpa tekanan."
+  },
+  en: {
+    title: "Developer Hangout 🚀",
+    desc: "CodeForge is a developer community where you can grow, learn, and connect with programmers from all skill levels. Here, you can casually chat, ask questions, share experiences, and even build projects together. This community is designed to be a comfortable, active, and productive space for anyone serious about technology.",
+    about: "CodeForge is more than just a Discord server—it’s a small ecosystem for developers. You can find like-minded people, mentors, and even partners to build projects or startups. We focus on growth, collaboration, and maintaining a positive environment where everyone can improve without pressure."
+  }
+};
+
+function setLang(lang){
+  document.getElementById('title').innerText = content[lang].title;
+  document.getElementById('desc').innerText = content[lang].desc;
+  document.getElementById('aboutText').innerText = content[lang].about;
+}
+
+setLang('id');
+
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
